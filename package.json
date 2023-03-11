@@ -1,5 +1,5 @@
 {
-  "name": "@trilmatic/element-stick",
+  "name": "@trilmatic/stickjs",
   "version": "1.0.0",
   "description": "If position sticky is not working i got you",
   "main": "index.js",
@@ -8,17 +8,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Trilmatic/element-stick.git"
+    "url": "git+https://github.com/Trilmatic/stickjs.git"
   },
   "keywords": [
-    "color",
-    "random",
-    "hexadecimal"
+    "sticky",
+    "scroll",
+    "position-sticky"
   ],
   "author": "Trilmatic",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Trilmatic/element-stick/issues"
+    "url": "https://github.com/Trilmatic/stickjs/issues"
   },
-  "homepage": "https://github.com/Trilmatic/element-stick#readme"
+  "homepage": "https://github.com/Trilmatic/stickjs#readme"
 }
