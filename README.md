@@ -1,14 +1,15 @@
-# Random Color
-NPM package for a function that returns a random hex color code
+# Element Stick
+
+Do you find css sticky position annoying? If yes we are on the same boat, this small package will programically add sticky functionality through plain javascript.
 
 ## USAGE
 
 ```js
-const randomColor = require("@trilmatic/random-color");
-console.log(randomColor());
+
 ```
 
 ## TESTING
+
 ```console
 npm run test
 ```

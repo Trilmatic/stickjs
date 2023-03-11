@@ -1,14 +1,14 @@
 {
   "name": "@trilmatic/element-stick",
   "version": "1.0.0",
-  "description": "If position stickz is not working i got you",
+  "description": "If position sticky is not working i got you",
   "main": "index.js",
   "scripts": {
     "test": "node test.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Trilmatic/npm-rand-color.git"
+    "url": "git+https://github.com/Trilmatic/element-stick.git"
   },
   "keywords": [
     "color",
@@ -18,7 +18,7 @@
   "author": "Trilmatic",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Trilmatic/npm-rand-color/issues"
+    "url": "https://github.com/Trilmatic/element-stick/issues"
   },
-  "homepage": "https://github.com/Trilmatic/npm-rand-color#readme"
+  "homepage": "https://github.com/Trilmatic/element-stick#readme"
 }
