@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "If position sticky is not working i got you",
   "type": "module",
+  "main": "src/stick.js",
   "scripts": {
     "test": "npx jest"
   },
