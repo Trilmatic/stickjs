@@ -1,0 +1,7 @@
+.is-sticky{
+    position: fixed;
+    top: var(--offsetTOP);
+    left: var(--offsetLEFT);
+    right: var(--offsetRIGHT);
+    bottom: var(--offsetBOTTOM);
+}
