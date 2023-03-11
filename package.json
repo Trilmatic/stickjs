@@ -2,9 +2,15 @@
   "name": "@trilmatic/stickjs",
   "version": "1.0.0",
   "description": "If position sticky is not working i got you",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "node test.js"
+    "test": "npx jest"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
   },
   "repository": {
     "type": "git",
@@ -20,5 +26,14 @@
   "bugs": {
     "url": "https://github.com/Trilmatic/stickjs/issues"
   },
-  "homepage": "https://github.com/Trilmatic/stickjs#readme"
+  "homepage": "https://github.com/Trilmatic/stickjs#readme",
+  "devDependencies": {
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
+    "babel-jest": "^29.5.0",
+    "jest": "^29.5.0"
+  },
+  "dependencies": {
+    "jest-environment-jsdom": "^29.5.0"
+  }
 }
