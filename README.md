@@ -2,6 +2,8 @@
 
 Do you find css sticky position annoying? If yes we are on the same boat, this small package will programically add sticky functionality through plain javascript to your desired element.
 
+## PACKAGE STILL IN TESTING!
+
 ## USAGE
 
 ```js
@@ -59,6 +61,8 @@ Default:
 ```js 
 true 
 ```
+
+## Functions
 
 ## TESTING
 
