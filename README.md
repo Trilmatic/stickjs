@@ -66,7 +66,7 @@ Default:
 
 ### viewport
 
-sometimes we do not want the element to stick on devices with lower resosution, viewport is the least ammount of pixels of width that trigger sticky behaviour. If the viewer width is lees then given number, element will not stick.  
+sometimes we do not want the element to stick on devices with lower resosution, viewport is the least ammount of pixels of width that trigger sticky behaviour. If the viewer width is less then given number, element will not stick.  
 Default:
 
 ```js
@@ -95,7 +95,7 @@ true;
 
 ### isSticky
 
-parameters: element or id, options
+parameters: element or id, options  
 initializes sthe script on given element or id with passed or default options, returns void
 
 ### isOverOffset
@@ -105,20 +105,20 @@ returns true if element is over offset and sticky behaviour should be triggered
 
 ### stick
 
-parameters: element, options
+parameters: element, options  
 makes element sticky by adding class, makes sure width and height are kept as position property is changed if needed, returns void
 
 ### unstick
 
-parameters: element, options
+parameters: element, options  
 removes sticky behaviour from element
 
 ### inYViewport
-parameters: element
+parameters: element  
 return true when element is in Y viewport (visible on screen)
 
 ### inXViewport
-parameters: element
+parameters: element  
 return true when element is in X viewport (visible on screen)
 
 ### activeIfInViewport
