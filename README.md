@@ -47,7 +47,7 @@ or add snipet below to your css files
 ## Use cases
 
 - Making element sticky in any given direction
-- Offsetting a sticky element to match gaps, padding or margins
+- Offsetting a sticky element to match gaps, paddings or margins
 - Checking if elements are in viewport
 - Highlighting element if different element is in viewport
 
