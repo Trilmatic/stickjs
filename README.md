@@ -132,7 +132,7 @@ adds an class to target if other element is in viewport, set isXAxis to true if 
 
 ## Browser compatibility
 
-Stickjs is supported by all of the modern browsers. The least compatible think stickjsy uses are css variables that are widely supported, [more on that topic here](https://caniuse.com/css-variables)
+Stickjs is supported by all of the modern browsers. The least compatible are css variables that are still widely supported, [more on that topic here](https://caniuse.com/css-variables)
 
 ## TESTING
 
