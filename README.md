@@ -2,7 +2,7 @@
 
 Do you find css sticky position annoying? If yes we are on the same boat, this small package will programically add sticky functionality through plain javascript to your desired element and even a little bit more.
 
-## USAGE
+## Usage
 
 Intstall as an npm package
 
@@ -33,6 +33,13 @@ or add snipet below to your css files
   bottom: var(--offsetBOTTOM);
 }
 ```
+
+## Use cases
+
+- Making element sticky in any given direction
+- Offsetting a sticky element to match gaps, padding or margins
+- Checking if elements are in viewport
+- Highlighting element if different element is in viewport
 
 ## Options
 
@@ -134,7 +141,7 @@ adds an class to target if other element is in viewport, set isXAxis to true if 
 
 Stickjs is supported by all of the modern browsers. The least compatible are css variables that are still widely supported, [more on that topic here](https://caniuse.com/css-variables)
 
-## TESTING
+## Testing
 
 ```console
 npm run test
