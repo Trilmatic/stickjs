@@ -6,7 +6,7 @@ Do you find css sticky position annoying? If yes we are on the same boat, this s
 
 Intstall as an npm package
 
-```js
+```shell
 npm install @schptr/stickjs
 ```
 
