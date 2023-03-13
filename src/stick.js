@@ -1,15 +1,26 @@
 export function isOverOffset(el, anchor = null, options) {
   var rect = el.getBoundingClientRect();
-  if (anchor && document.documentElement.scrollTop <= anchor) return false;
   switch (options.direction) {
     case "top":
+      if (anchor && document.documentElement.scrollTop <= anchor) return false;
       return rect.top <= options.offset;
     case "left":
+      if (anchor && document.documentElement.scrollLeft <= anchor) return false;
       return rect.left <= options.offset;
     case "right":
-      return rect.right <= options.offset;
+      if (anchor && document.documentElement.scrollLeft <= anchor) return false;
+      const vw = Math.max(
+        document.documentElement.clientWidth || 0,
+        window.innerWidth || 0
+      );
+      return rect.right - vw + options.offset <= 0;
     case "bottom":
-      return rect.bottom <= options.offset;
+      if (anchor && document.documentElement.scrollTop <= anchor) return false;
+      const vh = Math.max(
+        document.documentElement.clientHeight || 0,
+        window.innerHeight || 0
+      );
+      return rect.bottom - vh + options.offset <= 0;
     default:
       return false;
   }
@@ -59,7 +70,7 @@ export function isSticky(el, options = {}) {
   );
 
   if (isOverOffset(element, anchor, options)) {
-    if (!anchor) anchor = document.documentElement.scrollTop;
+    anchor = setAnchor(anchor, options.direction);
     stick(element, options);
   } else {
     anchor = null;
@@ -68,7 +79,7 @@ export function isSticky(el, options = {}) {
 
   function handleScroll() {
     if (isOverOffset(element, anchor, options)) {
-      if (!anchor) anchor = document.documentElement.scrollTop;
+      anchor = setAnchor(anchor, options.direction);
       stick(element, options);
     } else {
       anchor = null;
@@ -79,6 +90,22 @@ export function isSticky(el, options = {}) {
   document.addEventListener("scroll", handleScroll);
 
   handleScroll();
+}
+
+function setAnchor(anchor, direction) {
+  if (anchor) return anchor;
+  switch (direction) {
+    case "top":
+      return document.documentElement.scrollTop;
+    case "left":
+      return document.documentElement.scrollLeft;
+    case "right":
+      return document.documentElement.scrollLeft;
+    case "bottom":
+      return document.documentElement.scrollTop;
+    default:
+      return anchor;
+  }
 }
 
 export function inYViewport(element) {
