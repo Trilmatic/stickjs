@@ -6,6 +6,7 @@ import {
   inYViewport,
   inXViewport,
   activeIfOtherInViewport,
+  activeIfInViewport
 } from "../src/stick.js";
 
 describe("isOverOffset", () => {
@@ -362,6 +363,67 @@ describe("activeIfOtherInViewport", () => {
 
     // call the function
     activeIfOtherInViewport(targetEl, otherEl);
+
+    // expect the target element to not have the "active" class
+    expect(targetEl.classList.contains("active")).toBe(false);
+  });
+});
+
+describe("activeIfInViewport", () => {
+  let targetEl;
+  let otherEl;
+
+  beforeEach(() => {
+    // create the target element
+    targetEl = document.createElement("div");
+
+    // add classes and styles as necessary for your use case
+    targetEl.classList.add("target");
+    document.body.appendChild(targetEl);
+
+  });
+
+  afterEach(() => {
+    // remove the target and other elements from the document
+    targetEl.remove();
+  });
+
+  test('adds given class when other element is in viewport', () => {
+    targetEl.getBoundingClientRect = jest.fn(() => ({
+      x: 50,
+      y: 0,
+      width: 100,
+      height: 100,
+      top: -100,
+      right: 0,
+      bottom: 900,
+      left: -200,
+    }));
+
+    // call the function
+    activeIfInViewport(targetEl, false, "test");
+
+    // expect the target element to have the "active" class
+    expect(targetEl.classList.contains("test")).toBe(true);
+  });
+
+  test('removes "active" class when other element is not in viewport', () => {
+    targetEl.getBoundingClientRect = jest.fn(() => ({
+      x: 50,
+      y: 0,
+      width: 100,
+      height: 100,
+      top: 100,
+      right: 0,
+      bottom: -200,
+      left: -200,
+    }));
+
+    // add the "active" class to the target element
+    targetEl.classList.add("active");
+
+    // call the function
+    activeIfInViewport(targetEl);
 
     // expect the target element to not have the "active" class
     expect(targetEl.classList.contains("active")).toBe(false);
