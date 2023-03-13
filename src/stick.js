@@ -118,13 +118,27 @@ export function inXViewport(element) {
   return rect.right <= 0 && rect.left >= 0;
 }
 
-export function activeIfOtherInViewport(target, other, isXAxis = false) {
+export function activeIfOtherInViewport(target, other, isXAxis = false, activeClass = "active") {
   function handleScroll() {
     if (!target) return;
 
     if (isXAxis ? inXViewport(other) : inYViewport(other))
-      target.classList.add("active");
-    else target.classList.remove("active");
+      target.classList.add(activeClass);
+    else target.classList.remove(activeClass);
+  }
+
+  document.addEventListener("scroll", handleScroll);
+
+  handleScroll();
+}
+
+export function activeIfInViewport(target, isXAxis = false, activeClass = "active") {
+  function handleScroll() {
+    if (!target) return;
+
+    if (isXAxis ? inXViewport(target) : inYViewport(target))
+      target.classList.add(activeClass);
+    else target.classList.remove(activeClass);
   }
 
   document.addEventListener("scroll", handleScroll);
