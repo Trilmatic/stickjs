@@ -22,6 +22,16 @@ Import css
 import "@schptr/stickjs/src/stick.css";
 ```
 
+Initialize on an given element or id
+```js
+import { isSticky } from "@schptr/stickjs"; //Import function
+
+let options = { direction: "bottom", offset: 50 }; //Define options
+let element = document.getElementById("sticky-element"); //Define element
+
+isSticky(element, options); //Initialize stickyjs
+```
+
 or add snipet below to your css files
 
 ```css
