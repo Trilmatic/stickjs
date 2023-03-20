@@ -1,6 +1,6 @@
 {
   "name": "@schptr/stickjs",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "If position sticky is not working i got you",
   "type": "module",
   "main": "src/stick.js",

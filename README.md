@@ -22,16 +22,6 @@ Import css
 import "@schptr/stickjs/src/stick.css";
 ```
 
-Initialize on an given element or id
-```js
-import { isSticky } from "@schptr/stickjs"; //Import function
-
-let options = { direction: "bottom", offset: 50 }; //Define options
-let element = document.getElementById("sticky-element"); //Define element
-
-isSticky(element, options); //Initialize stickyjs
-```
-
 or add snipet below to your css files
 
 ```css
@@ -42,6 +32,17 @@ or add snipet below to your css files
   right: var(--offsetRIGHT);
   bottom: var(--offsetBOTTOM);
 }
+```
+
+Initialize on an given element or id
+
+```js
+import { isSticky } from "@schptr/stickjs"; //Import function
+
+let options = { direction: "bottom", offset: 50 }; //Define options
+let element = document.getElementById("sticky-element"); //Define element
+
+isSticky(element, options); //Initialize stickyjs
 ```
 
 ## Use cases
@@ -112,40 +113,83 @@ true;
 
 ### isSticky
 
-parameters: element or id, options  
+parameters:
+
+```
+target (element or id), options
+```
+
 initializes sthe script on given element or id with passed or default options, returns void
 
 ### isOverOffset
 
-prameters: element, anchor and options  
+prameters:
+
+```
+target (element), anchor and options
+```
+
 returns true if element is over offset and sticky behaviour should be triggered
 
 ### stick
 
-parameters: element, options  
+parameters:
+
+```
+target (element), options
+```
+
 makes element sticky by adding class, makes sure width and height are kept as position property is changed if needed, returns void
 
 ### unstick
 
-parameters: element, options  
+parameters:
+
+```
+target (element), options
+```
+
 removes sticky behaviour from element
 
 ### inYViewport
-parameters: element  
+
+parameters:
+
+```
+target (element)
+```
+
 return true when element is in Y viewport (visible on screen)
 
 ### inXViewport
-parameters: element  
+
+parameters:
+
+```
+target (element)
+```
+
 return true when element is in X viewport (visible on screen)
 
 ### activeIfInViewport
-parameters: target element, isXAxis (default false), activeClass (default "active")  
+
+parameters:
+
+```
+target (element), isXAxis (default false), activeClass (default "active")
+```
+
 adds an class to target if in viewport, set isXAxis to true if you need to check for X axis instead of Y
 
 ### activeIfOtherInViewport
-parameters: target element, other element, isXAxis (default false), activeClass (default "active")  
-adds an class to target if other element is in viewport, set isXAxis to true if you need to check for X axis instead of Y
 
+parameters:
+
+```
+target (element), other (element), isXAxis (default false), activeClass (default "active")
+```
+
+adds an class to target if other element is in viewport, set isXAxis to true if you need to check for X axis instead of Y
 
 ## Browser compatibility
 
